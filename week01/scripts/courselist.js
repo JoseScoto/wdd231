@@ -95,13 +95,13 @@ function displayCourses(coursesToShow) {
 
         // General styling for cards
         courseCard.style.borderRadius = '10px';
-        courseCard.style.color = '#ffffffff';
+        courseCard.style.color = '#fffffeff';
         courseCard.style.padding = '3px';
 
         // Logic to check completion
         if (course.completed) {
             courseCard.innerHTML += `<p>✅ Completed</p>`;
-            courseCard.style.backgroundColor = '#2e7c42ff';
+            courseCard.style.backgroundColor = '#1b5e20';
         }
         else {
             courseCard.innerHTML += `<p>❌ Pending</p>`;
