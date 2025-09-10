@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Course Home Page</title>
+    <meta name="description" content="Initial homepage for the course WDD231">
+    <meta name="author" content="Jose Escoto">
+    <link rel="stylesheet" href="../shared/styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <script defer src="../shared/scripts/getdates.js"></script>
+    <script defer src="../week01/scripts/navigation.js"></script>
+    <script defer src="../week01/scripts/courselist.js"></script>
+</head>
+<body>
+    <header>
+        <img src="../week01/images/developer-mode-svgrepo-com.svg" alt="site logo" width="24" height="24">
+        <span>Web and Computer Programming</span>
+        <button id="ham-button" class="hamburger" aria-label="navigation"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="current"><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="temple-layout">
+            <h1>Home</h1>
+            <!-- About Me -->
+             <section class="about">
+                <div>
+                    <h2>About me</h2>
+                    <div>
+                        <p>Hello, my name is Jose Escoto and I'm from El Salvador. I have 39 years old and
+                            I am passionate about nature and hiking volcanoes. I served my mission in Guatemala.
+                            I am studying Software Development with the intention to especialize in Machine Learning
+                            in the future. I am amazed about all the advances in AI and how things are changing really
+                            fast and I think it's super interesting to be able to train computers to think like us
+                            using mathematical algorithms. My favorite movie is The Lord of the Rings. I find dark-gothic
+                            styles fascinating and you can guess that by looking at these colors and style that I chose
+                            for this assignment.
+                        </p>
+                    </div>
+                </div>
+                    
+                <div>
+                    <h2>Student Photo</h2>
+                    <div>
+                        <img src="../week01/images/profilepic.webp" alt="Jose Escoto profile picture">
+                    </div>
+                </div>
+
+             </section>
+            
+            <!-- Certificates -->
+            <h2>Web Certificate Courses</h2>
+             <section class="certificates">
+                <div class="certificate-buttons">
+                    <button id="all-btn">All</button>
+                    <button id="cse-btn">CSE</button>
+                    <button id="wdd-btn">WDD</button>
+                </div>
+
+                <div class="certificate-courses">
+                    
+                </div>
+             </section>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://github.com/JoseScoto/joseescoto" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
+            <a href="www.linkedin.com/in/joescoto-1599255b" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
+            <a href="https://www.instagram.com/lifebyjose/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
+            <a href="https://web.whatsapp.com/" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp" width="16" height="16"></a>
+        </div>
+        <p>© <span id="currentyear"></span> 🪪 Jose Escoto 📍 El Salvador</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    
+</body>
+</html>

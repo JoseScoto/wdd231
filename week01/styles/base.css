@@ -1,0 +1,168 @@
+/* Color Scheme*/
+/* Variables */
+:root {
+    --crimson-rose: #c41e3a;
+    --deep-burgundy: #8b2635;
+    --antique-cream: #f4e6d7;
+    --warm-gold: #d4a574;
+    --rich-expresso: #2a1810;
+    --dark-chocolate: #1a0f0a;
+
+    --font-body: "Sora", sans-serif;
+    --font-heading: "Playfair Display", serif;
+    --font-accent: "Oswald", sans-serif;
+}
+
+/* Site Wide*/
+* {
+    font-family: "Playfair Display", serif;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 1px var(--antique-cream);
+    column-gap: 8px;
+    background-color: var(--deep-burgundy);
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: var(--antique-cream);
+}
+
+/* Navigation Hamburger */
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--antique-cream);
+    cursor: pointer;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+    font-size: 2rem;
+}
+
+/* Navigation */
+.navigation {
+    display: none;
+}
+.navigation.show {
+    display: block;
+}
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    color: var(--antique-cream);
+    background-color: var(--deep-burgundy);
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+}
+.navigation li.current a{
+    background-color: var(--dark-chocolate);
+}
+.navigation a:hover {
+    background-color: var(--crimson-rose);
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+/*********** Body ***********/
+h2 {
+    text-align: center;
+    margin: 2px;
+    color: var(--antique-cream);
+    background-color: var(--deep-burgundy);
+    padding: 5px;
+    border-radius: 10px;
+}
+.about img {
+    border-radius: 20px;
+    width: 100%;
+    padding: 3px;
+}
+.about p {
+    padding: 10px;
+}
+
+/*********** Web Certificates ***********/
+.certificates {
+    text-align: center;
+}
+.certificate-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 8px;
+    padding: 5px;
+}
+.certificate-courses {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+    padding: 5px;
+    margin: 5px;
+}
+button {
+    background-color: var(--rich-expresso);
+    border-radius: 8px;
+    color: var(--antique-cream);
+}
+.certificates button:hover {
+    background-color: var(--crimson-rose);
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: var(--rich-expresso);
+    padding: 1rem 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: var(--warm-gold) solid 1px;
+    border-radius: 22px;
+}
+.social img {
+    width: 22px;
+    height: 22px;
+}
+.social a:hover {
+    background-color: var(--crimson-rose);
+}
+footer p {
+    color: var(--antique-cream);
+}

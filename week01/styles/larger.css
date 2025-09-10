@@ -1,0 +1,40 @@
+@media only screen and (min-width: 38rem) {
+    header, main, nav, footer {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    header {
+        grid-template-columns: 24px auto;
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 10px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .certificate-courses {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 8px;
+        padding: 0;
+    }
+
+.hamburger {
+    display: none;
+}
+.navigation {
+    display: block;
+    border-bottom: solid 1px var(--warm-gold);
+}
+.navigation ul {
+    display: flex;
+}
+.navigation a {
+    border: none;
+}
+    
+}
