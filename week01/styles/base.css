@@ -138,6 +138,7 @@ button {
 /* Footer */
 footer {
     background-color: var(--deep-burgundy);
+    margin: 10px;
     padding: 1rem 10px;
     text-align: center;
     border-radius: 10px;

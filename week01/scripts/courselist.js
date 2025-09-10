@@ -107,10 +107,29 @@ function displayCourses(coursesToShow) {
             courseCard.innerHTML += `<p>❌ Pending</p>`;
             courseCard.style.backgroundColor = '#8b2635';
         }
-
         // Adding the card to the container
         coursesContainer.appendChild(courseCard);
+        
     });
+
+    // Adding sum of credits 
+    let totalCredits = 0;
+    coursesToShow.forEach(course => {
+        totalCredits = totalCredits + course.credits;
+    });
+
+    const creditMessage = document.createElement('p');
+
+    // Styling of message
+    creditMessage.style.textAlign = 'center';
+    creditMessage.style.width = '100%';
+    creditMessage.style.gridColumn = '1/-1'
+    creditMessage.style.fontWeight = 'bold';
+
+    creditMessage.innerHTML = `The total credits listed above is ${totalCredits}`;
+
+    // Adding message to the container
+    coursesContainer.appendChild(creditMessage);
 
 }
 
@@ -124,6 +143,8 @@ const wddButton = document.querySelector('#wdd-btn');
 
 allButton.addEventListener('click', () => {
     displayCourses(courses); // Shows all courses
+
+    console.log
 });
 
 cseButton.addEventListener('click', () => {
