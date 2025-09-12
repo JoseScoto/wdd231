@@ -1,0 +1,66 @@
+/* Variables */
+:root {
+    --crimson-rose: #c41e3a;
+    --deep-burgundy: #8b2635;
+    --antique-cream: #f4e6d7;
+    --warm-gold: #d4a574;
+    --rich-expresso: #2a1810;
+    --dark-chocolate: #1a0f0a;
+
+    --font-body: "Sora", sans-serif;
+    --font-heading: "Playfair Display", serif;
+    --font-accent: "Oswald", sans-serif;
+}
+
+/* Site Wide*/
+* {
+    font-family: "Playfair Display", serif;
+    box-sizing: border-box;
+}
+
+header h1 {
+    text-align: center;
+    color: rgb(71, 47, 158);
+    text-shadow: 0 2px 8px rgb(145, 137, 137);
+    padding: 2px;
+    margin: 0;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+h2, footer {
+    text-align: center;
+    margin: 2%;
+    color: rgb(71, 47, 158);
+}
+p {
+    text-align: center;
+    margin: 2%;
+}
+#cards section {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(206, 206, 252);
+}
+#cards section:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+#cards section img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+#cards section img:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
