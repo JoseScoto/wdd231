@@ -6,6 +6,7 @@
         "phone": "+44 111 222 3344",
         "website": "https://www.shireharvest.me",
         "membership_level": "2 (Silver)",
+        "email": "frodo@shireharvest.me",
         "imageurl": "images/hobbit-door.svg",
         "other_info": "Specializes in pipe-weed, ale brewing, and fresh produce export to Bree."
     },
@@ -15,6 +16,7 @@
         "phone": "+44 111 555 7788",
         "website": "https://www.durinsforgeworks.me",
         "membership_level": "3 (Gold)",
+        "email": "durin@durinsforgeworks.me",
         "imageurl": "images/hammering.svg",
         "other_info": "Makers of legendary weapons, armor, and mithril craft. Known for exclusive trade deals with Gondor."
     },
@@ -24,6 +26,7 @@
         "phone": "+44 111 888 2233",
         "website": "https://www.lorientextiles.me",
         "membership_level": "1 (Member)",
+        "email": "lorien@lorientextiles.me",
         "imageurl": "images/leaf.svg",
         "other_info": "Exports fine elven cloaks, ropes, and woven goods imbued with enchantments."
     },
@@ -33,6 +36,7 @@
         "phone": "+44 111 444 9911",
         "website": "https://www.rohanhorses.me",
         "membership_level": "2 (Silver)",
+        "email": "rohan@rohanhorses.me",
         "imageurl": "images/horse.svg",
         "other_info": "Famous breeders of the Mearas and strong warhorses, trusted across Middle-earth."
     },
@@ -42,6 +46,7 @@
         "phone": "+44 111 777 3366",
         "website": "https://www.gondorshipping.me",
         "membership_level": "3 (Gold)",
+        "email": "gondor@gondorshipping.me",
         "imageurl": "images/ship-wheel.svg",
         "other_info": "Operates major river and sea routes, connecting South Gondor to Dol Amroth and beyond."
     },
@@ -51,6 +56,7 @@
         "phone": "+44 111 999 4455",
         "website": "https://www.breetavernsupply.me",
         "membership_level": "1 (Member)",
+        "email": "bree@breetavernsupply.me",
         "imageurl": "images/barrel.svg",
         "other_info": "Provides ale barrels, salted meats, and bread to inns across Arnor."
     },
@@ -60,6 +66,7 @@
         "phone": "+44 111 321 6547",
         "website": "https://www.isengardinnovations.me",
         "membership_level": "2 (Silver)",
+        "email": "saruman@isengardinnovations.me",
         "imageurl": "images/tower.svg",
         "other_info": "Specializes in industrial tools, war machinery, and large-scale engineering (controversial reputation)."
     }

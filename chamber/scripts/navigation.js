@@ -25,18 +25,19 @@ const displayBusiness = (businesses) => {
 
         const businessName = document.createElement('h2');
         const businessIcon = document.createElement('img');
-        // Additional details
+        const businessEMail = document.createElement('p');
+        const businessPhone = document.createElement('p');
+        const businessUrl = document.createElement('p');
         
 
         // h2 content 
         businessName.textContent = business.business_name || 'No name';
 
-        // Image portrait information
+        // Card information
         businessIcon.src = business.imageurl || '';
         businessIcon.alt = `Icon of ${business.business_name || 'business'}`;
         businessIcon.loading = 'lazy';
-        businessIcon.width = 340;
-        businessIcon.height = 340;
+        businessEMail.textContent = business.
 
         // Appending elements to card 
         card.appendChild(businessName);

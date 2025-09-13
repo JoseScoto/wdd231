@@ -87,6 +87,14 @@ header {
     font-size: 2rem;
 }
 
+/* Business Cards */
+.business-card img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 /* Footer */
 footer {
     background-color: var(--steel-gray);
