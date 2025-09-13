@@ -8,6 +8,7 @@
         "membership_level": "2 (Silver)",
         "email": "frodo@shireharvest.me",
         "imageurl": "images/hobbit-door.svg",
+        "tag_line": "The Finest Leaf and Ale from the Heart of the Shire.",
         "other_info": "Specializes in pipe-weed, ale brewing, and fresh produce export to Bree."
     },
     {
@@ -18,6 +19,7 @@
         "membership_level": "3 (Gold)",
         "email": "durin@durinsforgeworks.me",
         "imageurl": "images/hammering.svg",
+        "tag_line": "Forged in Fire, Tempered in Legacy. The Mountain's Finest.",
         "other_info": "Makers of legendary weapons, armor, and mithril craft. Known for exclusive trade deals with Gondor."
     },
     {
@@ -28,6 +30,7 @@
         "membership_level": "1 (Member)",
         "email": "lorien@lorientextiles.me",
         "imageurl": "images/leaf.svg",
+        "tag_line": "Woven with Starlight, Blessed by the Lady's Grace.",
         "other_info": "Exports fine elven cloaks, ropes, and woven goods imbued with enchantments."
     },
     {
@@ -38,6 +41,7 @@
         "membership_level": "2 (Silver)",
         "email": "rohan@rohanhorses.me",
         "imageurl": "images/horse.svg",
+        "tag_line": "Trust Your Journey to the Spirit of the Mearas.",
         "other_info": "Famous breeders of the Mearas and strong warhorses, trusted across Middle-earth."
     },
     {
@@ -48,6 +52,7 @@
         "membership_level": "3 (Gold)",
         "email": "gondor@gondorshipping.me",
         "imageurl": "images/ship-wheel.svg",
+        "tag_line": "Connecting Realms with the Certainty of the White Tree.",
         "other_info": "Operates major river and sea routes, connecting South Gondor to Dol Amroth and beyond."
     },
     {
@@ -58,6 +63,7 @@
         "membership_level": "1 (Member)",
         "email": "bree@breetavernsupply.me",
         "imageurl": "images/barrel.svg",
+        "tag_line": "Engineering the Future of Industry. For a More Ordered World.",
         "other_info": "Provides ale barrels, salted meats, and bread to inns across Arnor."
     },
     {
@@ -68,6 +74,7 @@
         "membership_level": "2 (Silver)",
         "email": "saruman@isengardinnovations.me",
         "imageurl": "images/tower.svg",
+        "tag_line": "Crafting Beauty from the Ancient Heart of the Forest.",
         "other_info": "Specializes in industrial tools, war machinery, and large-scale engineering (controversial reputation)."
     }
 ]

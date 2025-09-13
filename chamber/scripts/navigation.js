@@ -25,9 +25,10 @@ const displayBusiness = (businesses) => {
 
         const businessName = document.createElement('h2');
         const businessIcon = document.createElement('img');
-        const businessEMail = document.createElement('p');
+        const businessEmail = document.createElement('p');
         const businessPhone = document.createElement('p');
         const businessUrl = document.createElement('p');
+        const textContainer = document.createElement('div');
         
 
         // h2 content 
@@ -37,11 +38,22 @@ const displayBusiness = (businesses) => {
         businessIcon.src = business.imageurl || '';
         businessIcon.alt = `Icon of ${business.business_name || 'business'}`;
         businessIcon.loading = 'lazy';
-        businessEMail.textContent = business.
+        businessEmail.innerHTML = `<strong>EMAIL:</strong> ${business.email}`;
+        businessPhone.innerHTML = `<strong>PHONE:</strong> ${business.phone}`;
+        businessUrl.innerHTML = `<strong>URL:</strong> ${business.website}`;
+
+        textContainer.appendChild(businessName);
+        textContainer.appendChild(businessEmail);
+        textContainer.appendChild(businessPhone);
+        textContainer.appendChild(businessUrl);
 
         // Appending elements to card 
-        card.appendChild(businessName);
         card.appendChild(businessIcon);
+        card.appendChild(textContainer);
+        // card.appendChild(businessName);
+        // card.appendChild(businessEmail);
+        // card.appendChild(businessPhone);
+        // card.appendChild(businessUrl);
         cards.appendChild(card);
 
 

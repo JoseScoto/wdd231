@@ -88,11 +88,34 @@ header {
 }
 
 /* Business Cards */
+#cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+.business-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #d5d8dd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 .business-card img {
-    max-width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.business-card h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+.business-card p {
+    margin: 2px 0;
+    font-size: 0.9rem;
 }
 
 /* Footer */
