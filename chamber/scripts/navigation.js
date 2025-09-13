@@ -11,6 +11,19 @@ navbutton.addEventListener('click', () => {
 const url = 'https://raw.githubusercontent.com/JoseScoto/wdd231/main/chamber/data/members.json';
 
 const cards = document.querySelector('#cards');
+const gridbutton = document.querySelector('#grid');
+const listbutton = document.querySelector('#list');
+const display = document.querySelector("#cards");
+
+gridbutton.addEventListener("click", () => {
+    display.classList.add("grid");
+    display.classList.remove("list");
+});
+
+listbutton.addEventListener("click", () => {
+    display.classList.add("list");
+    display.classList.remove("grid");
+});
 
 async function getBusinessData() {
     const response = await fetch(url);
@@ -40,7 +53,7 @@ const displayBusiness = (businesses) => {
         businessIcon.loading = 'lazy';
         businessEmail.innerHTML = `<strong>EMAIL:</strong> ${business.email}`;
         businessPhone.innerHTML = `<strong>PHONE:</strong> ${business.phone}`;
-        businessUrl.innerHTML = `<strong>URL:</strong> ${business.website}`;
+        businessUrl.innerHTML = `<strong>URL:</strong> <a href="${business.website}" target="_blank">${business.website}</a>`;
 
         textContainer.appendChild(businessName);
         textContainer.appendChild(businessEmail);
@@ -50,10 +63,6 @@ const displayBusiness = (businesses) => {
         // Appending elements to card 
         card.appendChild(businessIcon);
         card.appendChild(textContainer);
-        // card.appendChild(businessName);
-        // card.appendChild(businessEmail);
-        // card.appendChild(businessPhone);
-        // card.appendChild(businessUrl);
         cards.appendChild(card);
 
 

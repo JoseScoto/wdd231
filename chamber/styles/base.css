@@ -17,6 +17,12 @@
     background-color: var(--obsidian-black);
     color: var(--gold-ember);
 }
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--ash-white);
+}
 header {
     max-width: 1200px;
     display: flex;
@@ -98,11 +104,15 @@ header {
     display: flex;
     align-items: center;
     gap: 20px;
-    background-color: #d5d8dd;
+    background-color: #c7cacf;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+.business-card:hover {
+    box-shadow: 0 4px 8px var(--gold-ember);
+}
+
 .business-card img {
     width: 80px;
     height: 80px;
@@ -118,9 +128,22 @@ header {
     font-size: 0.9rem;
 }
 
+/* Grid View (default) */
+#cards.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+/* List View */
+#cards.list {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Footer */
+
 footer {
-    background-color: var(--steel-gray);
+    background-color: var(--obsidian-black);
     margin: 10px;
     padding: 1rem 10px;
     text-align: center;
@@ -128,6 +151,11 @@ footer {
     color: var(--ash-white);
 }
 
+.main-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
 .social {
     display: flex;
     justify-content: center;
@@ -155,4 +183,29 @@ footer {
 
 footer p {
     color: var(--ash-white);
+}
+
+/* Footer - (3 columns) */
+@media (min-width: 768px) {
+    .main-footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .business-location {
+        text-align: left;
+        padding: 5px;
+    }
+    .my-location {
+        text-align: right;
+        padding: 5px;
+    }
+    .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+    }
 }

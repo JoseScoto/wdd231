@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 - Course Home Page - Jose Escoto</title>
-    <meta name="description" content="Courses included in the Web and Computer Programming certificate">
+    <title>WDD 231 - Chamber of Commerce - Jose Escoto</title>
+    <meta name="description" content="List of businesses from Middle-Earth and their contact details.">
     <meta name="author" content="Jose Escoto">
-    <meta property="og:title" content="WDD 231 Home Page">
+    <meta property="og:title" content="Middle-Earth Chamber of Commerce">
     <meta property="og:description"
-        content="A page dedicated to show all the courses needed for the Web and Computer Programming certificate. You can also view additional details like course code, credits and totals.">
+        content="Listing all the commerces from Middle-Earth. Everything you need from the Shire to Rivendel to Gondor. Any business information can be found here.">
     <meta property="og:image" content="https://www.pexels.com/photo/computer-c-code-276452/">
     <meta property="og:url" content="https://josescoto.github.io/wdd231/week01/index.html">
     <link rel="stylesheet" href="../shared/styles/normalize.css">
@@ -46,37 +46,49 @@
         </header>
     </div>
 
-    <h1>Directory</h1>
-    
-    <main>
-        <div id="cards"></div>
-    </main>
+    <div class="main-container">
+        <h1>Directory</h1>
+        
+        <div class="menu">
+            <button id="grid">Grid</button>
+            <button id="list">List</button>
+        </div>
+        
+        <article class="grid">
+            <main>
+                <div id="cards"></div>
+            </main>
+        </article>
+    </div> 
 
     <footer>
-        <div class="business-location">
-            <p><strong>Chamber of Commerce</strong></p>
-            <p>White Tower Plaza, Minas Tirith, Gondor</p>
-            <p>info@mechamber.org</p>
-            <P>+299-555-1313</P>
+        <div class="main-footer">
+            <div class="business-location">
+                <p><strong>Chamber of Commerce</strong></p>
+                <p>White Tower Plaza, Minas Tirith, Gondor</p>
+                <p>info@mechamber.org</p>
+                <P>+299-555-1313</P>
+            </div>
+            
+            <div class="social">
+                <a href="https://github.com/JoseScoto/joseescoto" target="_blank"><img src="../chamber/images/github.svg"
+                        alt="github icon" width="16" height="16"></a>
+                <a href="https://www.linkedin.com/in/joescoto-1599255b" target="_blank"><img src="../chamber/images/linkedin.svg"
+                        alt="linkedin icon" width="16" height="16"></a>
+                <a href="https://www.instagram.com/lifebyjose/" target="_blank"><img src="../chamber/images/instagram.svg"
+                        alt="instagram icon" width="16" height="16"></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><img src="../chamber/images/whatsapp.svg" alt="whatsapp icon"
+                        width="16" height="16"></a>
+            </div>
+            
+            <div class="my-location">
+                <p>WDD231 Class Project</p>
+                <p>🪪 Jose Escoto </p>
+                <p>© <span id="currentyear"></span> Middle-Earth C.O.C.</p>
+                <p id="lastModified"></p>
+            </div>
         </div>
-
-        <div class="social">
-            <a href="https://github.com/JoseScoto/joseescoto" target="_blank"><img src="../chamber/images/github.svg" alt="github icon"
-                    width="16" height="16"></a>
-            <a href="https://www.linkedin.com/in/joescoto-1599255b" target="_blank"><img src="../chamber/images/linkedin.svg"
-                    alt="linkedin icon" width="16" height="16"></a>
-            <a href="https://www.instagram.com/lifebyjose/" target="_blank"><img src="../chamber/images/instagram.svg"
-                    alt="instagram icon" width="16" height="16"></a>
-            <a href="https://web.whatsapp.com/" target="_blank"><img src="../chamber/images/whatsapp.svg" alt="whatsapp icon" width="16"
-                    height="16"></a>
-        </div>
-
-        <div class="my-location">
-            <p>WDD231 Class Project</p>
-            <p>🪪 Jose Escoto 📍 The Shire - El Salvador</p>
-            <p>© <span id="currentyear"></span> Middle-Earth Chamber of Commerce</p>
-            <p id="lastModified"></p>
-        </div>
+        
         
     </footer>
 
