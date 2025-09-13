@@ -1,59 +1,67 @@
 {
-{"business_name": "Shire Harvest Co.",
-"address": "Bagshot Row, Hobbiton, The Shire",
-"phone": "+44 111 222 3344",
-"website": "www.shireharvest.me",
-"membership_level": "2 (Silver)",
-"imageurl": "",
-"other_info": "Specializes in pipe-weed, ale brewing, and fresh produce export to Bree."},
-
-{"business_name": "Durin’s Forgeworks",
-"address": "Deep Hall, Erebor, The Lonely Mountain",
-"phone": "+44 111 555 7788",
-"website": "www.durinsforgeworks.me",
-"membership_level": "3 (Gold)",
-"imageurl":
-"other_info": "Makers of legendary weapons, armor, and mithril craft. Known for exclusive trade deals with Gondor."},
-
-{"business_name": "Lórien Textiles",
-"address": "Caras Galadhon, Lothlórien",
-"phone": "+44 111 888 2233",
-"website": "www.lorientextiles.me",
-"membership_level": "1 (Member)",
-"imageurl":
-"other_info": "Exports fine elven cloaks, ropes, and woven goods imbued with enchantments."},
-
-{"business_name": "Rohan Horsebreeders Guild",
-"address": "Meduseld Stables, Edoras, Rohan",
-"phone": "+44 111 444 9911",
-"website": "www.rohanhorses.me",
-"membership_level": "2 (Silver)",
-"imageurl":
-"other_info": "Famous breeders of the Mearas and strong warhorses, trusted across Middle-earth."},
-
-{"business_name": "Gondor Shipping & Trade",
-"address": "Pelargir Docks, Gondor",
-"phone": "+44 111 777 3366",
-"website": "www.gondorshipping.me",
-"membership_level": "3 (Gold)",
-"imageurl":
-"other_info": "Operates major river and sea routes, connecting South Gondor to Dol Amroth and beyond."},
-
-{"business_name": "Bree Merchants’ Tavern Supply",
-"address": "Prancing Pony District, Bree-town",
-"phone": "+44 111 999 4455",
-"website": "www.breetavernsupply.me",
-"membership_level": "1 (Member)",
-"imageurl":
-"other_info": "Provides ale barrels, salted meats, and bread to inns across Arnor."},
-
-{"business_name": "Isengard Innovations",
-"address": "Orthanc Tower, Isengard, Nan Curunír",
-"phone": "+44 111 321 6547",
-"website": "www.isengardinnovations.me",
-"membership_level": "2 (Silver)",
-"imageurl":
-"other_info": "Specializes in industrial tools, war machinery, and large-scale engineering (controversial reputation)."}
-
-
+    "businesses": [
+    {
+        "business_name": "Shire Harvest Co.",
+        "address": "Bagshot Row, Hobbiton, The Shire",
+        "phone": "+44 111 222 3344",
+        "website": "https://www.shireharvest.me",
+        "membership_level": "2 (Silver)",
+        "imageurl": "images/hobbit-door.svg",
+        "other_info": "Specializes in pipe-weed, ale brewing, and fresh produce export to Bree."
+    },
+    {
+        "business_name": "Durin’s Forgeworks",
+        "address": "Deep Hall, Erebor, The Lonely Mountain",
+        "phone": "+44 111 555 7788",
+        "website": "https://www.durinsforgeworks.me",
+        "membership_level": "3 (Gold)",
+        "imageurl": "images/hammering.svg",
+        "other_info": "Makers of legendary weapons, armor, and mithril craft. Known for exclusive trade deals with Gondor."
+    },
+    {
+        "business_name": "Lórien Textiles",
+        "address": "Caras Galadhon, Lothlórien",
+        "phone": "+44 111 888 2233",
+        "website": "https://www.lorientextiles.me",
+        "membership_level": "1 (Member)",
+        "imageurl": "images/leaf.svg",
+        "other_info": "Exports fine elven cloaks, ropes, and woven goods imbued with enchantments."
+    },
+    {
+        "business_name": "Rohan Horsebreeders Guild",
+        "address": "Meduseld Stables, Edoras, Rohan",
+        "phone": "+44 111 444 9911",
+        "website": "https://www.rohanhorses.me",
+        "membership_level": "2 (Silver)",
+        "imageurl": "images/horse.svg",
+        "other_info": "Famous breeders of the Mearas and strong warhorses, trusted across Middle-earth."
+    },
+    {
+        "business_name": "Gondor Shipping & Trade",
+        "address": "Pelargir Docks, Gondor",
+        "phone": "+44 111 777 3366",
+        "website": "https://www.gondorshipping.me",
+        "membership_level": "3 (Gold)",
+        "imageurl": "images/ship-wheel.svg",
+        "other_info": "Operates major river and sea routes, connecting South Gondor to Dol Amroth and beyond."
+    },
+    {
+        "business_name": "Bree Merchants’ Tavern Supply",
+        "address": "Prancing Pony District, Bree-town",
+        "phone": "+44 111 999 4455",
+        "website": "https://www.breetavernsupply.me",
+        "membership_level": "1 (Member)",
+        "imageurl": "images/barrel.svg",
+        "other_info": "Provides ale barrels, salted meats, and bread to inns across Arnor."
+    },
+    {
+        "business_name": "Isengard Innovations",
+        "address": "Orthanc Tower, Isengard, Nan Curunír",
+        "phone": "+44 111 321 6547",
+        "website": "https://www.isengardinnovations.me",
+        "membership_level": "2 (Silver)",
+        "imageurl": "images/tower.svg",
+        "other_info": "Specializes in industrial tools, war machinery, and large-scale engineering (controversial reputation)."
+    }
+]
 }
