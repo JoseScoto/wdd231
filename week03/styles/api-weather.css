@@ -1,0 +1,33 @@
+h1, footer{
+    text-align: center;
+}
+
+.weather-card {
+    background-color: rgb(206, 211, 211);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 4px 16px rgb(110, 101, 101);
+}
+.weather-card h2 {
+    color: rgb(70, 17, 4);
+    font-size: 2rem;
+}
+.weather-card p {
+    font-size: 1.2rem;
+    margin: 5px;
+}
+.weather-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+#weather-icon {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0,0.5));
+}
+weather.description {
+    color: red;
+}
