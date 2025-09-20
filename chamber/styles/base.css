@@ -8,8 +8,8 @@
     --ash-white: #E8E6E1;
     --gold-ember: #E5B44B;
 
-    --font-body: "Cinzel", serif;
-    --font-heading: "Merriweather",serif;
+    --font-heading: "Cinzel", serif;
+    --font-body: "Merriweather",serif;
 }
 
 body {
@@ -18,7 +18,8 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: 700;
+    font-weight: 200;
+    font-size: medium;
 }
 .navigation li a {
     font-family: var(--font-body);
@@ -34,6 +35,46 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1rem;
     background-color: var(--ash-white);
 }
+/* Container of index */
+.index-container {
+    max-width: 1200px;
+    /* margin: 5px; */
+    padding: 5px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+/* Business Cards container */
+.business-cards {
+    max-width: 1200px;
+    margin: 5px;
+    border-radius: 10px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.events, .weather-card, .forecast, .card1, .card2, .card3 {
+    background-color: var(--ash-white);
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-transform: capitalize;
+}
+.events h2, .weather-card h2, .forecast h2, .card1 h2,
+.card2 h2, .card3 h2 {
+    background-color: var(--obsidian-black);
+    color: var(--gold-ember);
+    margin: -11px -11px 2px -11px;
+    padding: 2px;
+    border-radius: 6px 6px 0 0;
+    text-align: center;
+
+}
+
+
 header {
     max-width: 1200px;
     display: flex;
@@ -149,6 +190,37 @@ header {
 #cards.list {
     display: flex;
     flex-direction: column;
+}
+
+/* Hero image */
+.hero {
+    position: relative;
+    height: 500px;
+    background-image: url(../images/ring-and-banners.webp);
+    background-size: cover;
+    display: flex;
+    margin: 5px;
+    border-radius: 10px;
+}
+.cta-button {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background-color: red;
+    color: aliceblue;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
 /* Footer */
