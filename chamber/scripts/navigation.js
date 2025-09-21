@@ -28,7 +28,20 @@ listbutton.addEventListener("click", () => {
 async function getBusinessData() {
     const response = await fetch(url);
     const data = await response.json();
-    displayBusiness(data.businesses);
+
+    // Checking if we are on homepage or directory
+    const isHomepage = document.querySelector('.business-cards');
+    const isDirectory = document.querySelector('#cards');
+
+    if (isHomepage) {
+        // Show spotlight members
+        displaySpotLightMembers(data.businesses);
+    }
+
+    if (isDirectory) {
+        // Show all businesses in directory page
+        displayBusiness(data.businesses);
+    }
 }
 
 const displayBusiness = (businesses) => {
@@ -64,9 +77,46 @@ const displayBusiness = (businesses) => {
         card.appendChild(businessIcon);
         card.appendChild(textContainer);
         cards.appendChild(card);
-
-
     });
 }
+
+// Spotlight Members
+const displaySpotLightMembers = (businesses) => {
+    const goldSilverMembers = businesses.filter(business =>
+        business.membership_level === 'gold' ||
+        business.membership_level === 'silver'
+    );
+
+    // Shuffling the array
+    const shuffled = goldSilverMembers.sort(() => 0.5 - Math.random());
+
+    // Selecting the first 2-3 or how may we want
+    const selectedMembers = shuffled.slice(0, 3);
+
+    // Get card containers
+    const card1 = document.querySelector('.card1');
+    const card2 = document.querySelector('.card2');
+    const card3 = document.querySelector('.card3');
+
+    const cards = [card1, card2, card3];
+
+    // Clearing content and populating with member data
+    selectedMembers.forEach((member, index) => {
+        const card = cards[index];
+
+        card.innerHTML = `
+            <h2>${member.business_name}</h2>
+            <div class="business-info">
+                <img src="${member.imageurl}" alt="${member.business_name} logo" loading="lazy">
+                <div class="member-details">
+                    <p><strong>Phone:</strong> ${member.phone}</p>
+                    <p><strong>Address:</strong> ${member.address}</p>
+                    <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+                    <p class="membership-level"><strong>Member Level:</strong> ${member.membership_level.toUpperCase()}</p>
+                </div>
+            </div>
+        `;
+    });
+};
 
 getBusinessData();

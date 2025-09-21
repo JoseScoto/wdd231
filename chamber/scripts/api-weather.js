@@ -7,7 +7,15 @@ const minTemp = document.querySelector('#min-temp');
 const humidity = document.querySelector('#humidity');
 const sunrise = document.querySelector('#sunrise');
 const sunset = document.querySelector('#sunset');
-const url = "https://api.openweathermap.org/data/2.5/weather?lat=13.98&lon=-89.54&units=metric&appid=7baddc2deefd13593effaef3d49fdb23";
+const url = "https://api.openweathermap.org/data/2.5/forecast?lat=13.98&lon=-89.54&units=metric&appid=7baddc2deefd13593effaef3d49fdb23";
+
+// Forecast selectors
+const todayDay = document.querySelector('#today');
+const tomorrowDay = document.querySelector('#tomorrow-day');
+const afterTomorrowDay = document.querySelector('#after-tomorrow-day');
+const forecastToday = document.querySelector('#forecast-today');
+const tomorrow = document.querySelector('#tomorrow');
+const afterTomorrow = document.querySelector('#after-tomorrow');
 
 // Defining async function
 async function apiFetch() {
@@ -25,28 +33,58 @@ async function apiFetch() {
     }
 }
 
+// Function to get the names of the week dinamically 
+function getDayNames() {
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+    const afterTomorrow = new Date(today);
+    afterTomorrow.setDate(today.getDate() + 2);
+
+    const options = { weekday: 'long' };
+
+    return {
+        today: today.toLocaleDateString('en-US', options),
+        tomorrow: tomorrow.toLocaleDateString('en-US', options),
+        afterTomorrow: afterTomorrow.toLocaleDateString('en-US', options)
+    };
+}
+
 // Display JSON data to web page
 function displayResults(data) {
-    currentTemp.innerHTML = `${data.main.temp}&deg;F`
-    captionDesc.innerHTML = data.weather[0].description
-    maxTemp.innerHTML = `${data.main.temp_max}&deg;F`
-    minTemp.innerHTML = `${data.main.temp_min}&deg;F`
-    humidity.innerHTML = `${data.main.humidity}%`
+    // Get days names
+    const dayNames = getDayNames();
+
+    currentTemp.innerHTML = `${data.list[0].main.temp}&deg;C`
+    captionDesc.innerHTML = data.list[0].weather[0].description
+    maxTemp.innerHTML = `${data.list[0].main.temp_max}&deg;C`
+    minTemp.innerHTML = `${data.list[0].main.temp_min}&deg;C`
+    humidity.innerHTML = `${data.list[0].main.humidity}%`
 
     // Converting the values from API to readable code (consulted via AI how to do this)
-    sunrise.innerHTML = new Date(data.sys.sunrise * 1000).toLocaleTimeString('en-US', {
+    sunrise.innerHTML = new Date(data.city.sunrise * 1000).toLocaleTimeString('en-US', {
         hour: '2-digit',
         minute: '2-digit',
         hour12: true
     });
-    sunset.innerHTML = new Date(data.sys.sunset * 1000).toLocaleTimeString('en-US', {
+    sunset.innerHTML = new Date(data.city.sunset * 1000).toLocaleTimeString('en-US', {
         hour: '2-digit',
         minute: '2-digit',
         hour12: true
     });
-    const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+
+    // Forecast section
+    todayDay.innerHTML = dayNames.today;
+    tomorrowDay.innerHTML = dayNames.tomorrow;
+    afterTomorrowDay.innerHTML = dayNames.afterTomorrow;
+
+    forecastToday.innerHTML = `${Math.round(data.list[0].main.temp)}&deg;C`;
+    tomorrow.innerHTML = `${Math.round(data.list[8].main.temp)}&deg;C`;
+    afterTomorrow.innerHTML = `${Math.round(data.list[16].main.temp)}&deg;C`;
+
+    const iconsrc = `https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`
     weatherIcon.setAttribute('SRC', iconsrc)
-    weatherIcon.setAttribute('alt', data.weather[0].description)
+    weatherIcon.setAttribute('alt', data.weather[0].description);
 }
 
 apiFetch();
