@@ -84,7 +84,7 @@ function displayResults(data) {
 
     const iconsrc = `https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`
     weatherIcon.setAttribute('SRC', iconsrc)
-    weatherIcon.setAttribute('alt', data.weather[0].description);
+    weatherIcon.setAttribute('alt', data.list[0].weather[0].description);
 }
 
 apiFetch();
