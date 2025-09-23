@@ -1,7 +1,6 @@
 // Selecting HTML elements 
 const currentTemp = document.querySelector('#fahrenheit-temp');
 const weatherIcon = document.querySelector('#weather-icon');
-const captionDesc = document.querySelector('figcaption');
 const maxTemp = document.querySelector('#max-temp');
 const minTemp = document.querySelector('#min-temp');
 const humidity = document.querySelector('#humidity');
@@ -56,7 +55,6 @@ function displayResults(data) {
     const dayNames = getDayNames();
 
     currentTemp.innerHTML = `${data.list[0].main.temp}&deg;C`
-    captionDesc.innerHTML = data.list[0].weather[0].description
     maxTemp.innerHTML = `${data.list[0].main.temp_max}&deg;C`
     minTemp.innerHTML = `${data.list[0].main.temp_min}&deg;C`
     humidity.innerHTML = `${data.list[0].main.humidity}%`

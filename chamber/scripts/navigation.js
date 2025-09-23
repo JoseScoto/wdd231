@@ -5,15 +5,19 @@ const gridbutton = document.querySelector('#grid');
 const listbutton = document.querySelector('#list');
 const display = document.querySelector("#cards");
 
-gridbutton.addEventListener("click", () => {
-    display.classList.add("grid");
-    display.classList.remove("list");
-});
+// Add event listeners only if buttons exists
+if (gridbutton && listbutton && display) {
+    gridbutton.addEventListener("click", () => {
+        display.classList.add("grid");
+        display.classList.remove("list");
+    });
 
-listbutton.addEventListener("click", () => {
-    display.classList.add("list");
-    display.classList.remove("grid");
-});
+    listbutton.addEventListener("click", () => {
+        display.classList.add("list");
+        display.classList.remove("grid");
+    });
+}
+
 
 async function getBusinessData() {
     const response = await fetch(membersUrl);
@@ -73,8 +77,8 @@ const displayBusiness = (businesses) => {
 // Spotlight Members
 const displaySpotLightMembers = (businesses) => {
     const goldSilverMembers = businesses.filter(business =>
-        business.membership_level === 'gold' ||
-        business.membership_level === 'silver'
+        business.membership_level === 'Gold' ||
+        business.membership_level === 'Silver'
     );
 
     // Shuffling the array

@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Container of index */
 .index-container {
     max-width: 1200px;
-    /* margin: 5px; */
+    margin: 0 auto;
     padding: 5px;
     border-radius: 10px;
     display: grid;
@@ -49,11 +49,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Business Cards container */
 .business-cards {
     max-width: 1200px;
-    margin: 5px;
+    margin: 0 auto;
     border-radius: 10px;
     gap: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 10px;
+    text-align: left;
 }
 .events, .weather-card, .forecast, .card1, .card2, .card3 {
     background-color: var(--ash-white);
@@ -71,9 +73,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2px;
     border-radius: 6px 6px 0 0;
     text-align: center;
-
 }
-
 
 header {
     max-width: 1200px;
@@ -178,6 +178,31 @@ header {
 .business-card p {
     margin: 2px 0;
     font-size: 0.9rem;
+}
+
+/* Business cards shuffling */
+.business-cards .card1, .business-cards .card2, .business-cards .card3 {
+    border: 1px solid #c7cacf;
+    padding: 15px;
+    text-align: center;
+}
+.business-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+.business-info img {
+    max-width: 50px;
+    height: auto;
+    margin: 0;
+}
+.member-details {
+    flex: 1;
+}
+.member-details p {
+    margin: 5px 0;
+    font-size: 0.9em;
 }
 
 /* Grid View (default) */
