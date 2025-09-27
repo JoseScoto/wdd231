@@ -81,10 +81,13 @@ const courses = [
 // Creating container for cards
 const coursesContainer = document.querySelector('.certificate-courses');
 
+const courseDetails = document.querySelector('#course-details');
+
 function displayCourses(coursesToShow) {
     coursesContainer.innerHTML = '';
     coursesToShow.forEach(course => {
         const courseCard = document.createElement('div');
+        const courseDiv = document.createElement('div'); // Modal update
 
         // Adding content to the card
         courseCard.innerHTML = `
@@ -93,10 +96,16 @@ function displayCourses(coursesToShow) {
         <p>${course.credits} credits</p>
         `;
 
+        // Modal - Adding event listener to courseCard
+        courseCard.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
+
         // General styling for cards
         courseCard.style.borderRadius = '10px';
         courseCard.style.color = '#fffffeff';
         courseCard.style.padding = '3px';
+        courseCard.style.cursor = 'pointer';
 
         // Logic to check completion
         if (course.completed) {
@@ -107,6 +116,7 @@ function displayCourses(coursesToShow) {
             courseCard.innerHTML += `<p>❌ Pending</p>`;
             courseCard.style.backgroundColor = '#8b2635';
         }
+        
         // Adding the card to the container
         coursesContainer.appendChild(courseCard);
         
@@ -143,8 +153,6 @@ const wddButton = document.querySelector('#wdd-btn');
 
 allButton.addEventListener('click', () => {
     displayCourses(courses); // Shows all courses
-
-    console.log
 });
 
 cseButton.addEventListener('click', () => {
@@ -156,3 +164,21 @@ wddButton.addEventListener('click', () => {
     const wddCourses = courses.filter(course => course.subject === 'WDD');
     displayCourses(wddCourses); // Shows only WDD
 });
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    courseDetails.showModal();
+
+    closeModal.addEventListener('click', () => {
+        courseDetails.close();
+    });
+}

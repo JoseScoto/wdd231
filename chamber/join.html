@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middel Earth Chamber of Commerce - Jose Escoto</title>
+    <meta name="description" content="A page where you can submit your application to join the Middle-Earth Chamber of Commerce.">
+    <meta name="author" content="Jose Escoto">
+    <meta property="og:title" content="Middle-Earth Chamber of Commerce">
+    <meta property="og:description"
+        content="Listing all the commerces from Middle-Earth. Everything you need from the Shire to Rivendel to Gondor. Any business information can be found here.">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/JoseScoto/wdd231/main/chamber/images/lotr-chamber-commerce.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:url" content="https://josescoto.github.io/wdd231/chamber/directory.html">
+    <link rel="stylesheet" href="../shared/styles/normalize.css">
+    <link rel="icon" href="../chamber/images/dragonfavi.ico">
+    <link rel="stylesheet" href="../chamber/styles/base.css">
+    <link rel="stylesheet" href="../chamber/styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <script defer src="../shared/scripts/getdates.js"></script>
+    <script defer src="../chamber/scripts/hamburger.js"></script>
+    <script defer src="../chamber/scripts/navigation.js"></script>
+    <script defer src="../chamber/scripts/join-page.js"></script>
+</head>
+
+<body>
+    <div class="top-container">
+        <header>
+
+            <div class="logo">
+                <img src="../chamber/images/dragon-head.svg" alt="site logo" width="24" height="24">
+                <span>Middle-Earth Chamber of Commerce</span>
+            </div>
+
+            <nav id="nav-bar" class="navigation">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Business Directory</a></li>
+                    <li class="current"><a href="#">Join</a></li>
+                </ul>
+            </nav>
+            <button id="ham-button" class="hamburger" aria-label="navigation"></button>
+        </header>
+    </div>
+
+    <main>
+        
+        <div class="main-content">
+    
+            <!-- Form Section -->
+            <div class="form-section">
+                <h1>Join</h1>
+    
+                <form method="GET" action="thankyou.html" class="join-form">
+                    <label>First Name <input type="text" name="first" required autocomplete="given-name"
+                            title="Your First Name"></label>
+                    <label>Last Name <input type="text" name="last" required autocomplete="family-name"
+                            title="Your Last Name"></label>
+                    <label>Organizational Title <input type="text" name="org-title" autocomplete="organization-title"
+                            title="The organizational title of the applicant" pattern="[A-Za-z\s\-]{7,}"
+                            placeholder="Your Organizational Title"></label>
+                    <label>Email <input type="email" name="email" required placeholder="john89@gmail.com" title="Your Email"
+                            autocomplete="email"></label>
+                    <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel"
+                            title="A Phone Number with dashes" placeholder="987-555-1234"></label>
+                    <label>Business Name <input type="text" name="business-name" required autocomplete="organization"
+                            title="The name of the person's business" placeholder="Business name"></label>
+    
+                    <label>Membership Level
+                        <select name="membership" required>
+                            <option value="">None</option>
+                            <option value="Non-profit">NP Membership (Non-profit - No fee)</option>
+                            <option value="Bronze">Bronze Membership</option>
+                            <option value="Silver">Silver Membership</option>
+                            <option value="Gold">Gold Membership</option>
+                        </select>
+                    </label>
+    
+                    <label>Organization's Description
+                        <textarea name="description" title="Description of your organization" rows="4" cols="50"></textarea>
+                    </label>
+    
+                    <input type="hidden" name="timestamp" id="timestamp">
+                    <input type="submit" value="Join Guild">
+    
+                </form>
+            </div>
+    
+            <!-- Cards Section -->
+            <div class="cards-section">
+                <h2>Membership Levels</h2>
+                <div class="membership-cards">
+                    <!-- NP Section-->
+                    <div class="membership-card np">
+                        <h3>NP Membership</h3>
+                        <p>For non-profit organizations</p>
+                        <a href="#" class="card-link" onclick="openModal('np-modal')">Learn More</a>
+                    </div>
+    
+                    <!-- Bronze Section-->
+                    <div class="membership-card bronze">
+                        <h3>Bronze Membership</h3>
+                        <p>Essential business benefits</p>
+                        <a href="#" class="card-link" onclick="openModal('bronze-modal')">Learn More</a>
+                    </div>
+    
+                    <!-- Silver Section-->
+                    <div class="membership-card silver">
+                        <h3>Silver Membership</h3>
+                        <p>Enhanced business benefits</p>
+                        <a href="#" class="card-link" onclick="openModal('silver-modal')">Learn More</a>
+                    </div>
+    
+                    <!-- Gold Section-->
+                    <div class="membership-card gold">
+                        <h3>Gold Membership</h3>
+                        <p>Premium business benefits</p>
+                        <a href="#" class="card-link" onclick="openModal('gold-modal')">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!-- Modals -->
+        <dialog id="np-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>NP Membership</h2>
+                    <button class="close-btn" onclick="closeModal('np-modal')">&times;</button>
+                </div>
+                <div class="price">FREE</div>
+                <ul class="benefits-list">
+                    <li>Access to networking events</li>
+                    <li>Monthly newsletter</li>
+                    <li>Basic directory listing</li>
+                    <li>Community forum access</li>
+                    <li>Volunteer opportunities</li>
+                </ul>
+            </div>
+        </dialog>
+    
+        <dialog id="bronze-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Bronze Membership</h2>
+                    <button class="close-btn" onclick="closeModal('bronze-modal')">&times;</button>
+                </div>
+                <div class="price">$100/year</div>
+                <ul class="benefits-list">
+                    <li>All NP Membership benefits</li>
+                    <li>10% discount on events</li>
+                    <li>Enhanced directory listing</li>
+                    <li>Access to member-only workshops</li>
+                    <li>Basic marketing support</li>
+                </ul>
+            </div>
+        </dialog>
+    
+        <dialog id="silver-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Silver Membership</h2>
+                    <button class="close-btn" onclick="closeModal('silver-modal')">&times;</button>
+                </div>
+                <div class="price">$200/year</div>
+                <ul class="benefits-list">
+                    <li>All Bronze Membership benefits</li>
+                    <li>20% discount on events</li>
+                    <li>Premium directory listing</li>
+                    <li>Access to exclusive training sessions</li>
+                    <li>Social media promotion support</li>
+                </ul>
+            </div>
+        </dialog>
+    
+        <dialog id="gold-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Gold Membership</h2>
+                    <button class="close-btn" onclick="closeModal('gold-modal')">&times;</button>
+                </div>
+                <div class="price">$350/year</div>
+                <ul class="benefits-list">
+                    <li>All Silver Membership benefits</li>
+                    <li>30% discount on events</li>
+                    <li>Featured directory listing</li>
+                    <li>VIP event access</li>
+                    <li>Priority customer support</li>
+                </ul>
+            </div>
+        </dialog>
+    
+    </main>
+
+
+    <footer>
+        <div class="main-footer">
+            <div class="business-location">
+                <p><strong>Chamber of Commerce</strong></p>
+                <p>White Tower Plaza, Minas Tirith, Gondor</p>
+                <p>info@mechamber.org</p>
+                <P>+299-555-1313</P>
+            </div>
+
+            <div class="social">
+                <a href="https://github.com/JoseScoto/joseescoto" target="_blank"><img
+                        src="../chamber/images/github.svg" alt="github icon" width="16" height="16"></a>
+                <a href="https://www.linkedin.com/in/joescoto-1599255b" target="_blank"><img
+                        src="../chamber/images/linkedin.svg" alt="linkedin icon" width="16" height="16"></a>
+                <a href="https://www.instagram.com/lifebyjose/" target="_blank"><img
+                        src="../chamber/images/instagram.svg" alt="instagram icon" width="16" height="16"></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><img src="../chamber/images/whatsapp.svg"
+                        alt="whatsapp icon" width="16" height="16"></a>
+            </div>
+
+            <div class="my-location">
+                <p>WDD231 Class Project</p>
+                <p>🪪 Jose Escoto </p>
+                <p>© <span id="currentyear"></span> Middle-Earth C.O.C.</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

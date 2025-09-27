@@ -114,3 +114,4 @@ const displaySpotLightMembers = (businesses) => {
 };
 
 getBusinessData();
+
