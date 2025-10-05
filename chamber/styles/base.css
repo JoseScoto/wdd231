@@ -446,6 +446,17 @@ dialog::backdrop {
     .membership-cards {
         grid-template-columns: 1fr;
     }
+
+    /* Adding the Grid Areas Styling*/
+        .attraction-card {
+
+            grid-template-areas:
+                "picture name"
+                "picture cost"
+                "picture address"
+                "picture description"
+                "picture button"
+        }
 }
 
 /* Thank you page style */

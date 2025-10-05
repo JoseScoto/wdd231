@@ -1,0 +1,145 @@
+/* Attractions Section */
+.attractions-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.attractions {
+    background-color: var(--ash-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.attractions h2 {
+    font-size: 2rem;
+    color: var(--obsidian-black);
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--gold-ember);
+    padding-bottom: 0.5rem;
+}
+
+ .welcome-banner h1 {
+     font-size: 28px;
+     margin-bottom: 10px;
+ }
+
+ .visit-message {
+     background: #f8f9fa;
+     border-left: 4px solid #667eea;
+     padding: 20px;
+     margin: 30px;
+     border-radius: 6px;
+     font-size: 18px;
+     color: #333;
+     animation: slideIn 0.5s ease-out;
+ }
+
+ .visit-message.first-visit {
+     border-left-color: #28a745;
+     background: #d4edda;
+ }
+
+ .visit-message.recent-visit {
+     border-left-color: #ffc107;
+     background: #fff3cd;
+ }
+
+ .visit-message.returning-visit {
+     border-left-color: #667eea;
+     background: #e7f3ff;
+ }
+
+/* Attraction Card */
+.attractions-info {
+    gap: 1.5rem;
+    display: grid; 
+}
+
+.attraction-card {
+    background-color: white;
+    border: 2px solid var(--steel-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: grid;
+    grid-template-areas:
+        "name"
+        "picture"
+        "description"
+        "cost"
+        "address"
+        "button";
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(179, 58, 58, 0.2);
+    border-color: var(--molten-red);
+}
+
+.attraction-card img {
+    grid-area: picture;
+    width: 100%;
+    border-radius: 7px;
+    height: 200px;
+    width: 250px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.attraction-card h2 {
+    grid-area: name;
+    font-size: 1.5rem;
+    color: var(--molten-red);
+    padding: 1rem 1rem 0.5rem;
+    margin: 0;
+    border: none;
+    text-align: left;
+}
+
+.attraction-card address {
+    grid-area: address;
+    font-style: italic;
+    color: var(--steel-gray);
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.attraction-card .cost {
+    grid-area: cost;
+    color: var(--gold-ember);
+    font-weight: bold;
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.attraction-card .learn-more-btn {
+    grid-area: button;
+    display: inline-block;
+    margin: 0 1rem 1rem;
+    padding: 0.75rem;
+    background-color: var(--molten-red);
+    color: var(--ash-white);
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transfor 0.2s ease;
+}
+.attraction-card .learn-more-btn:hover {
+    background-color: var(--intense-red);
+    transform: scale(1.05);
+}
+
+.attraction-card p {
+    padding: 0 1rem 1rem;
+    color: var(--obsidian-black);
+    line-height: 1.6;
+    margin: 0.5rem 0 0;
+}

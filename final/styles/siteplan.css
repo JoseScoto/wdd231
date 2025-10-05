@@ -23,6 +23,10 @@ h1, h2, h3 {
     font-family: var(--font-accent);
     letter-spacing: 1px;
 }
+a {
+    color: var(--bone);
+    text-decoration: none;
+}
 
 p, li {
     font-family: var(--font-body);

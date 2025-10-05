@@ -18,6 +18,7 @@
     <meta property="og:url" content="https://josescoto.github.io/wdd231/chamber/directory.html">
     <link rel="stylesheet" href="../shared/styles/normalize.css">
     <link rel="icon" href="../chamber/images/dragonfavi.ico">
+    <link rel="stylesheet" href="../chamber/styles/small.css">
     <link rel="stylesheet" href="../chamber/styles/base.css">
     <link rel="stylesheet" href="../chamber/styles/larger.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +28,6 @@
         rel="stylesheet">
     <script defer src="../shared/scripts/getdates.js"></script>
     <script defer src="../chamber/scripts/hamburger.js"></script>
-    <script defer src="../chamber/scripts/api-weather.js"></script>
     <script defer src="../chamber/scripts/navigation.js"></script>
 </head>
 
@@ -53,69 +53,21 @@
         </header>
     </div>
 
-    <!-- <section class="hero">
-        <div class="hero-content">
-            <a href="#" class="cta-button">Join the Guild</a>
-        </div>
-    </section> -->
-
     <main>
-        <h1>Home</h1>
-        <!-- Events, Current Weather and Forecast-->
-        <!-- <div class="index-container">
-            <div class="events">
-                <h2>Events</h2>
-                <div class="business-info">
-                    <div class="member-details">
-                        <p>Coming Soon</p>
-                    </div>
-                </div>
+        <h1>Discover</h1>
+        <div class="container">
+            <div class="welcome-banner">
             </div>
 
-            <div class="weather-card">
-                <h2>Current Weather</h2>
-                <div class="business-info">
-                    <img id="weather-icon" src="" alt="Weather icon" width="50" height="50">
-                    <div class="member-details">
-                        <p id="fahrenheit-temp"></p>
-                        <p>Max: <span id="max-temp"></span></p>
-                        <p>Min: <span id="min-temp"></span></p>
-                        <p>Humidity: <span id="humidity"></span></p>
-                        <p>Sunrise: <span id="sunrise"></span></p>
-                        <p>Sunset: <span id="sunset"></span></p>
-                    </div>
-                </div>
+            <div id="visitMessage" class="visit-message"></div>
+        </div>
+        <!-- Grid -->
+        <div id="grids" class="attractions-container">
+            <div class="attractions">
+                <h2>Middle-Earth Attractions</h2>
+                <div id="attractions-grid" class="attractions-info"></div>
             </div>
-
-            <div class="forecast">
-                <h2>Weather Forecast</h2>
-                <div class="business-info">
-                    <div class="member-details">
-                        <p><span id="today">Saturday</span>: <span id="forecast-today"></span></p>
-                        <p><span id="tomorrow-day">Sunday</span>: <span id="tomorrow"></span></p>
-                        <p><span id="after-tomorrow-day">Monday</span>: <span id="after-tomorrow"></span></p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- Business Cards-->
-        <!-- <div class="business-cards">
-            <div class="card1">
-                <h2>Business Name</h2>
-                <p>Tagline</p>
-            </div>
-
-            <div class="card2">
-                <h2>Business Name</h2>
-                <p>Tagline</p>
-            </div>
-
-            <div class="card3">
-                <h2>Business Name</h2>
-                <p>Tagline</p>
-            </div>
-        </div> -->
+        </div>
     </main>
 
 
@@ -150,6 +102,7 @@
 
     </footer>
 
+    <script type="module" src="../chamber/scripts/attraction.js"></script>
 
 </body>
 

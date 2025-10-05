@@ -1,4 +1,4 @@
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
 
     /* Hide nav and show hamburger */
     .navigation {
@@ -32,4 +32,14 @@
         padding: 10px 16px;
         border-top: 1px solid rgba(231, 19, 19, 0.03);
     }  
+
+}
+
+/* Larger screens - 2 column grid */
+@media (min-width: 768px) {
+    .attractions-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
 }
