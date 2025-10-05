@@ -112,7 +112,7 @@
 
 .attraction-card .cost {
     grid-area: cost;
-    color: var(--gold-ember);
+    color: var(--obsidian-black);
     font-weight: bold;
     padding: 0 1rem;
     margin: 0.5rem 0;
@@ -124,8 +124,8 @@
     display: inline-block;
     margin: 0 1rem 1rem;
     padding: 0.75rem;
-    background-color: var(--molten-red);
-    color: var(--ash-white);
+    background-color: rgb(87, 0, 0);
+    color: white;
     text-decoration: none;
     border-radius: 5px;
     text-align: center;

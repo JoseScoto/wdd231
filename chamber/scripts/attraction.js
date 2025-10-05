@@ -13,6 +13,7 @@ function theAttractions(attractions) {
         const picture = document.createElement('img')
         picture.src = `images/${place.photo_url}`
         picture.alt = place.name
+        picture.loading = 'lazy'
         card.appendChild(picture)
 
         // Title
