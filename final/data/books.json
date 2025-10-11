@@ -1,0 +1,107 @@
+[
+        {
+            "title": "Dracula",
+            "author": "Bram Stoker",
+            "year": 1897,
+            "genre": "Gothic Horror",
+            "cover": "images/drakula.webp"
+        },
+        {
+            "title": "Frankenstein",
+            "author": "Mary Shelley",
+            "year": 1818,
+            "genre": "Gothic Science Fiction",
+            "cover": "images/frankestein.webp"
+        },
+        {
+            "title": "The Picture of Dorian Gray",
+            "author": "Oscar Wilde",
+            "year": 1890,
+            "genre": "Dark Philosophy",
+            "cover": "images/dorian-gray.webp"
+        },
+        {
+            "title": "The Tell-Tale Heart",
+            "author": "Edgar Allan Poe",
+            "year": 1843,
+            "genre": "Psychological Horror",
+            "cover": "images/tale-heart.webp"
+        },
+        {
+            "title": "Carmilla",
+            "author": "Sheridan Le Fanu",
+            "year": 1872,
+            "genre": "Vampirism",
+            "cover": "images/carmilla.webp"
+        },
+        {
+            "title": "Strange Case of Dr. Jekyll and Mr. Hyde",
+            "author": "Robert Louis Stevenson",
+            "year": 1886,
+            "genre": "Psychological Horror",
+            "cover": "images/strange-case.webp"
+        },
+        {
+            "title": "The Mysteries of Udolpho",
+            "author": "Ann Radcliffe",
+            "year": 1794,
+            "genre": "Classic Gothic",
+            "cover": "images/udolpho-misteries.webp"
+        },
+        {
+            "title": "The Monk",
+            "author": "Matthew Lewis",
+            "year": 1796,
+            "genre": "Gothic Horror",
+            "cover": "images/the-monk.webp"
+        },
+        {
+            "title": "The Fall of the House of Usher",
+            "author": "Edgar Allan Poe",
+            "year": 1839,
+            "genre": "Gothic Horror",
+            "cover": "images/allan-poe.webp"
+        },
+        {
+            "title": "The Phantom of the Opera",
+            "author": "Gaston Leroux",
+            "year": 1910,
+            "genre": "Gothic Romance",
+            "cover": "images/phantom-opera.webp"
+        },
+        {
+            "title": "Rebecca",
+            "author": "Daphne du Maurier",
+            "year": 1938,
+            "genre": "Gothic Suspense",
+            "cover": "images/rebecca.webp"
+        },
+        {
+            "title": "The Castle of Otranto",
+            "author": "Horace Walpole",
+            "year": 1764,
+            "genre": "Foundational Gothic",
+            "cover": "images/otranto-castle.webp"
+        },
+        {
+            "title": "Jane Eyre",
+            "author": "Charlotte Brontë",
+            "year": 1847,
+            "genre": "Gothic Romance",
+            "cover": "images/jane-eyre.webp"
+        },
+        {
+            "title": "Wuthering Heights",
+            "author": "Emily Brontë",
+            "year": 1847,
+            "genre": "Gothic Tragedy",
+            "cover": "images/wuthering.webp"
+        },
+        {
+            "title": "The Turn of the Screw",
+            "author": "Henry James",
+            "year": 1898,
+            "genre": "Psychological Gothic Horror",
+            "cover": "images/screw-turn.webp"
+        }
+    ]

@@ -1,0 +1,357 @@
+:root {
+    --black: #0D0D0D;
+    --charcoal: #2B2B2B;
+    --crimson: #8B0000;
+    --blood-red: #B22222;
+    --ember: #FF4500;
+    --parchment: #E6D3B3;
+    --bone: #F5F5F0;
+    --gold: #C9A227;
+    --font-heading: 'Cinzel Decorative', serif;
+    --font-body: 'Lora', serif;
+    --font-accent: 'UnifrakturCook', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1a0a0a 0%, #2d1414 100%);
+    min-height: 100vh;
+    font-family: var(--font-body);
+    color: var(--bone);
+    padding: 2rem 1rem;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.gallery-header h1 {
+    font-family: var(--font-accent);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--gold);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.gallery-header p {
+    font-size: 1.1rem;
+    color: var(--parchment);
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        padding: 0 2rem;
+    }
+}
+
+.book-card {
+    position: relative;
+    aspect-ratio: 3/4;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.frame-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    filter: drop-shadow(0 0 15px rgba(201, 162, 39, 0.3));
+}
+
+.book-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    background: radial-gradient(ellipse at center, rgba(43, 43, 43, 0.8) 0%, rgba(13, 13, 13, 0.9) 100%);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.book-card:hover .book-content {
+    background: radial-gradient(ellipse at center, rgba(139, 0, 0, 0.3) 0%, rgba(13, 13, 13, 0.95) 100%);
+}
+
+.book-cover {
+    width: 60%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+    background-color: var(--charcoal);
+    min-height: 200px;
+}
+
+.book-card:hover .book-cover {
+    transform: translateY(-5px);
+}
+
+.book-info {
+    text-align: center;
+    width: 100%;
+}
+
+.book-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.book-author {
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    color: var(--parchment);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.book-year {
+    font-size: 0.9rem;
+    color: var(--blood-red);
+    font-weight: 600;
+}
+
+.book-genre {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background: rgba(139, 0, 0, 0.3);
+    border: 1px solid var(--crimson);
+    border-radius: 15px;
+    font-size: 0.75rem;
+    color: var(--ember);
+}
+
+.loading {
+    text-align: center;
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #2d1414 0%, #1a0a0a 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    border: 2px solid var(--gold);
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: var(--gold);
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: var(--ember);
+}
+
+/* Form Styling*/
+.book-form {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 1.5rem;
+    background: radial-gradient(ellipse at center, rgba(43, 43, 43, 0.85) 0%, rgba(13, 13, 13, 0.95) 100%);
+    border-radius: 15px;
+    border: 2px solid var(--gold);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    color: var(--bone);
+    font-family: var(--font-body);
+}
+
+.book-form>h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--gold);
+    font-family: var(--font-accent);
+    font-size: 1.4rem;
+}
+
+.book-form__form {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Optional: two-column rows */
+.book-form__form .row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Fieldset reset */
+.book-form__form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.book-form__form label {
+    display: block;
+    color: var(--parchment);
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+}
+
+.book-form__form input[type="text"],
+.book-form__form input[type="email"],
+.book-form__form input[type="date"],
+.book-form__form select,
+.book-form__form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--charcoal);
+    background: rgba(0, 0, 0, 0.55);
+    color: var(--bone);
+    font-size: 0.95rem;
+    box-shadow: inset 0 -2px 6px rgba(0, 0, 0, 0.35);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.book-form__form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.book-form__form input::placeholder,
+.book-form__form textarea::placeholder {
+    color: rgba(230, 211, 179, 0.6);
+}
+
+/* Focus */
+.book-form__form input:focus,
+.book-form__form select:focus,
+.book-form__form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 0 3px rgba(201, 162, 39, 0.06);
+    transform: translateY(-1px);
+}
+
+/* Submit button */
+.book-form__form input[type="submit"] {
+    background: linear-gradient(180deg, var(--gold), #a07e21);
+    color: var(--black);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    width: max-content;
+    margin: 0.5rem auto 0;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.55);
+}
+
+.book-form__form input[type="submit"]:hover {
+    transform: translateY(-2px);
+}
+
+/* Mobile responsive */
+@media (max-width: 720px) {
+    .book-form__form .row-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .book-form {
+        padding: 1rem;
+        margin: 1.25rem;
+    }
+}
+
+/* Thank you or confirmation page */
+.confirmation-card {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 15px;
+    background: radial-gradient(ellipse at center, rgba(43, 43, 43, 0.85) 0%, rgba(13, 13, 13, 0.95) 100%);
+    border: 2px solid var(--gold);
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.confirmation-card .book-title {
+    font-family: var(--font-accent);
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.confirmation-card p {
+    color: var(--parchment);
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+.confirmation-card {
+    background-color: var(--ember);
+    color: var(--bone);
+}
