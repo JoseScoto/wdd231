@@ -289,12 +289,11 @@ header {
 
 footer {
     position: relative;
-    background-color: rgba(58, 42, 42, 0.3);
+    background-color: rgba(20, 15, 15, 0.3);
     margin: 10px;
     padding: 1rem 10px;
     text-align: center;
     border-radius: 10px;
-    color: var(--bone);
     z-index: 10;
     font-family: var(--font-body);
 }

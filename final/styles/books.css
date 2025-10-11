@@ -144,7 +144,6 @@ body {
 
 .book-year {
     font-size: 0.9rem;
-    color: var(--blood-red);
     font-weight: 600;
 }
 
@@ -156,7 +155,6 @@ body {
     border: 1px solid var(--crimson);
     border-radius: 15px;
     font-size: 0.75rem;
-    color: var(--ember);
 }
 
 .loading {
@@ -223,7 +221,7 @@ body {
     font-family: var(--font-body);
 }
 
-.book-form>h2 {
+.book-form h2 {
     text-align: center;
     margin-bottom: 0.5rem;
     color: var(--gold);
