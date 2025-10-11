@@ -9,6 +9,9 @@ navbutton.addEventListener('click', () => {
 })
 
 // Redirection to gallery from cta
-document.getElementById('ctaButton').addEventListener('click', () => {
-    window.location.href = 'gallery.html';
-});
+const ctaButton = document.getElementById('ctaButton');
+if (ctaButton) {
+    ctaButton.addEventListener('click', () => {
+        window.location.href = 'gallery.html';
+    });
+}
