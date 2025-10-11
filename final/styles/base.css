@@ -16,7 +16,23 @@
 
     --font-heading: 'Cinzel Decorative', serif;
     --font-body: 'Lora', serif;
-    --font-accent: 'UnifrakturCook', cursive;
+    --font-accent: 'UnifrakturCook';
+}
+
+h1, h2, h3 {
+    font-family: var(--font-accent);
+}
+
+p, li {
+    font-family: var(--font-body);
+}
+
+.accent,
+.navigation a,
+.hero-content h1,
+.hero-content button {
+    font-family: var(--font-accent);
+    font-weight: 700;
 }
 
 .frames {
