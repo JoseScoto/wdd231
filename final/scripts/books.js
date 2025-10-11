@@ -50,7 +50,7 @@ function openModal(book) {
         <img src="${book.cover}" alt="${book.title}" loading="lazy" style="width: 100%; max-width: 200px; margin: 0 auto 1rem; display: block; border-radius: 8px;">
         <h2 style="color: var(--gold); font-family: var(--font-heading); text-align: center; margin-bottom: 1rem;">${book.title}</h2>
         <p style="text-align: center; font-style: italic; color: var(--parchment); margin-bottom: 0.5rem;">${book.author}</p>
-        <p style="text-align: center; color: var(--blood-red); font-weight: 600; margin-bottom: 1rem;">Publicado en ${book.year}</p>
+        <p style="text-align: center; color: var(--blood-red); font-weight: 600; margin-bottom: 1rem;">Published on ${book.year}</p>
         <p style="text-align: center;"><span style="background: rgba(139, 0, 0, 0.3); padding: 0.5rem 1rem; border-radius: 15px; border: 1px solid var(--crimson); color: var(--ember);">${book.genre}</span></p>
     `;
     
